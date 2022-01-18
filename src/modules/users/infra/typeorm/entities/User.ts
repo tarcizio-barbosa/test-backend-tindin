@@ -1,15 +1,18 @@
-import { ObjectId } from "mongodb";
-import { Column, Entity, ObjectIdColumn } from "typeorm";
+// import { ObjectId } from "mongodb";
+import { Column, Entity, Index, ObjectIdColumn } from "typeorm";
 
 @Entity()
 class User {
-  @ObjectIdColumn()
-  id: ObjectId;
+  @ObjectIdColumn({
+    type: "uuid",
+  })
+  _id: string;
 
   @Column()
   name: string;
 
   @Column()
+  @Index({ unique: true })
   email: string;
 
   @Column()
