@@ -1,4 +1,4 @@
-import { IUser } from "../interfaces/User";
+import { IUser } from "../interfaces/IUser";
 
 interface IUsersRepository {
   create(data: IUser): Promise<void>;

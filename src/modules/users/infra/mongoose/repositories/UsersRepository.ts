@@ -1,6 +1,6 @@
 import { model, Model } from "mongoose";
 
-import { IUser } from "../../../interfaces/User";
+import { IUser } from "../../../interfaces/IUser";
 import { IUsersRepository } from "../../../repositories/IUsersRepository";
 import { userSchema } from "../schemas/User";
 

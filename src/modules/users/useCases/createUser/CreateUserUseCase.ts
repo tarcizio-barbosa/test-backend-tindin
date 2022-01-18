@@ -2,7 +2,7 @@ import "reflect-metadata";
 import { hash } from "bcryptjs";
 import { inject, injectable } from "tsyringe";
 
-import { IUser } from "../../interfaces/User";
+import { IUser } from "../../interfaces/IUser";
 import { IUsersRepository } from "../../repositories/IUsersRepository";
 import { CreateUserError } from "./CreateUserError";
 

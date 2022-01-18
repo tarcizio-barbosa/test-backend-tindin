@@ -1,5 +1,5 @@
 import { User } from "../../infra/mongoose/schemas/User";
-import { IUser } from "../../interfaces/User";
+import { IUser } from "../../interfaces/IUser";
 import { IUsersRepository } from "../IUsersRepository";
 
 class InMemoryUsersRepository implements IUsersRepository {

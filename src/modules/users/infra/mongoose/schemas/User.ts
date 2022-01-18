@@ -1,7 +1,7 @@
 import { Schema } from "mongoose";
 import { v4 as uuid } from "uuid";
 
-import { IUser } from "../../../interfaces/User";
+import { IUser } from "../../../interfaces/IUser";
 
 const userSchema = new Schema<IUser>({
   id: {
