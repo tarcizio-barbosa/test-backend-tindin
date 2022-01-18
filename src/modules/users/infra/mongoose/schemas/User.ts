@@ -1,8 +1,14 @@
 import { Schema } from "mongoose";
+import { v4 as uuid } from "uuid";
 
 import { IUser } from "../../../interfaces/User";
 
-export const userSchema = new Schema<IUser>({
+const userSchema = new Schema<IUser>({
+  id: {
+    type: String,
+    required: true,
+    default: uuid,
+  },
   name: {
     type: String,
     required: true,
@@ -17,3 +23,18 @@ export const userSchema = new Schema<IUser>({
     required: true,
   },
 });
+
+class User {
+  id: string;
+  name: string;
+  email: string;
+  password: string;
+
+  constructor() {
+    if (!this.id) {
+      this.id = uuid();
+    }
+  }
+}
+
+export { userSchema, User };
