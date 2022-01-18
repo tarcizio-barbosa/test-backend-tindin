@@ -6,8 +6,7 @@
   "author": "Tarcizio B <tarcizio.barbosa@outlook.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/shared/infra/http/server.ts",
-    "typeorm": "ts-node-dev ./node_modules/typeorm/cli"
+    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/shared/infra/http/server.ts"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
@@ -30,9 +29,8 @@
     "bcryptjs": "^2.4.3",
     "express": "^4.17.2",
     "express-async-errors": "^3.1.1",
-    "mongodb": "^4.3.0",
+    "mongoose": "^6.1.7",
     "reflect-metadata": "^0.1.13",
-    "tsyringe": "^4.6.0",
-    "typeorm": "^0.2.41"
+    "tsyringe": "^4.6.0"
   }
 }

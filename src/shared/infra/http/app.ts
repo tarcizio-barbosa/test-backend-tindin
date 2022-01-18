@@ -3,7 +3,7 @@ import express, { NextFunction, Request, Response } from "express";
 import "express-async-errors";
 
 import { AppError } from "../../errors/AppError";
-import "../typeorm/index";
+import "../mongoose/index";
 import "../../container";
 import { router } from "./routes";
 

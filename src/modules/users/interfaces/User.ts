@@ -1,8 +1,8 @@
-interface ICreateUserDTO {
+interface IUser {
   name: string;
   email: string;
   password: string;
   _id?: string;
 }
 
-export { ICreateUserDTO };
+export { IUser };
