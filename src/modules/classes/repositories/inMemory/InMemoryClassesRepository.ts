@@ -39,6 +39,12 @@ class InMemoryClassesRepository implements IClassesRepository {
 
     return oneClass;
   }
+
+  async deleteClass(id: string): Promise<void> {
+    const oneClass = this.classes.findIndex((classById) => classById.id === id);
+
+    this.classes.splice(oneClass, 1);
+  }
 }
 
 export { InMemoryClassesRepository };

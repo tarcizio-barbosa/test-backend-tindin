@@ -5,6 +5,7 @@ interface IClassesRepository {
   list(): Promise<IClass[]>;
   findById(id: string): Promise<IClass>;
   updateClass(data: IClass): Promise<IClass>;
+  deleteClass(id: string): Promise<void>;
 }
 
 export { IClassesRepository };

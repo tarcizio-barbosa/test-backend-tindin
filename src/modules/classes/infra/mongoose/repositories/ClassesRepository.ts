@@ -62,6 +62,10 @@ class ClassesRepository implements IClassesRepository {
 
     return updatedClass;
   }
+
+  async deleteClass(id: string): Promise<void> {
+    await this.Repository.findOneAndDelete({ id });
+  }
 }
 
 export { ClassesRepository };
