@@ -24,6 +24,21 @@ class InMemoryClassesRepository implements IClassesRepository {
   async findById(id: string): Promise<IClass> {
     return this.classes.find((oneClass) => oneClass.id === id);
   }
+
+  async updateClass({
+    id,
+    name,
+    description,
+    video,
+    date_init,
+    date_end,
+  }: IClass): Promise<IClass> {
+    const oneClass = this.classes.find((classById) => classById.id === id);
+
+    Object.assign(oneClass, { name, description, video, date_init, date_end });
+
+    return oneClass;
+  }
 }
 
 export { InMemoryClassesRepository };

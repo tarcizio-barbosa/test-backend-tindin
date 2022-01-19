@@ -40,6 +40,28 @@ class ClassesRepository implements IClassesRepository {
 
     return oneClass;
   }
+
+  async updateClass({
+    id,
+    name,
+    description,
+    video,
+    date_init,
+    date_end,
+  }: IClass): Promise<IClass> {
+    const updatedClass = await this.Repository.findOneAndUpdate(
+      { id },
+      {
+        name,
+        description,
+        video,
+        date_init,
+        date_end,
+      }
+    );
+
+    return updatedClass;
+  }
 }
 
 export { ClassesRepository };
