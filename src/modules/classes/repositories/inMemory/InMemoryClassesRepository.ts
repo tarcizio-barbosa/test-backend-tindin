@@ -20,6 +20,10 @@ class InMemoryClassesRepository implements IClassesRepository {
 
     return allClasses;
   }
+
+  async findById(id: string): Promise<IClass> {
+    return this.classes.find((oneClass) => oneClass.id === id);
+  }
 }
 
 export { InMemoryClassesRepository };

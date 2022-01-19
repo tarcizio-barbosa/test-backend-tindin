@@ -5,10 +5,14 @@ import { IUsersRepository } from "../IUsersRepository";
 class InMemoryUsersRepository implements IUsersRepository {
   private users: User[] = [];
 
-  async create(data: IUser): Promise<void> {
+  async create({ name, email, password }: IUser): Promise<void> {
     const user = new User();
 
-    Object.assign(user, data);
+    Object.assign(user, {
+      name,
+      email,
+      password,
+    });
 
     this.users.push(user);
   }

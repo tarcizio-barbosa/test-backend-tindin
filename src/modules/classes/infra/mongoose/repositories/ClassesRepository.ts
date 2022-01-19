@@ -34,6 +34,12 @@ class ClassesRepository implements IClassesRepository {
   async list(): Promise<IClass[]> {
     return this.Repository.find({});
   }
+
+  async findById(id: string): Promise<IClass> {
+    const oneClass = await this.Repository.findOne({ id });
+
+    return oneClass;
+  }
 }
 
 export { ClassesRepository };
