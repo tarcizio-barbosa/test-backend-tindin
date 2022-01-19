@@ -30,6 +30,10 @@ class ClassesRepository implements IClassesRepository {
 
     return newClass;
   }
+
+  async list(): Promise<IClass[]> {
+    return this.Repository.find({});
+  }
 }
 
 export { ClassesRepository };

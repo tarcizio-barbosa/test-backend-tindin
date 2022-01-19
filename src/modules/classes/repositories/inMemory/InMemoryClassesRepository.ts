@@ -14,6 +14,12 @@ class InMemoryClassesRepository implements IClassesRepository {
 
     return newClass;
   }
+
+  async list(): Promise<IClass[]> {
+    const allClasses = this.classes;
+
+    return allClasses;
+  }
 }
 
 export { InMemoryClassesRepository };

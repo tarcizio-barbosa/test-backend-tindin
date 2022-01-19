@@ -15,6 +15,7 @@ describe("Create Class", () => {
     inMemoryClassesRepository = new InMemoryClassesRepository();
     createClassUseCase = new CreateClassUseCase(inMemoryClassesRepository);
   });
+
   it("Should be able to create a new Class", async () => {
     const newClass = await createClassUseCase.execute({
       name: "O que é a SELIC?",
