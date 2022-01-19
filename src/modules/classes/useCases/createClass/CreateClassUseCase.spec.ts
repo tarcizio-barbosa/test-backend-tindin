@@ -24,8 +24,6 @@ describe("Create Class", () => {
       date_end: addSevenDays,
     });
 
-    console.log(newClass);
-
     expect(newClass).toHaveProperty("id");
   });
 });

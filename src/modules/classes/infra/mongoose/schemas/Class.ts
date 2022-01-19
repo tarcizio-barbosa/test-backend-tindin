@@ -2,6 +2,8 @@ import { Schema } from "mongoose";
 import { v4 as uuid } from "uuid";
 
 import { IClass } from "../../../interfaces/IClass";
+import { IComment } from "../../../interfaces/IComment";
+import { commentSchema } from "./Comment";
 
 const classSchema = new Schema<IClass>(
   {
@@ -30,6 +32,7 @@ const classSchema = new Schema<IClass>(
       type: Date,
       required: true,
     },
+    comments: [commentSchema],
     total_comments: {
       type: Number,
       required: true,
@@ -46,6 +49,7 @@ class Class {
   video: string;
   date_init: Date;
   date_end: Date;
+  comments: Array<IComment>;
   total_comments: number;
   created_at: Date;
   updated_at: Date;
@@ -59,6 +63,12 @@ class Class {
     }
     if (!this.updated_at) {
       this.updated_at = new Date();
+    }
+    if (!this.total_comments) {
+      this.total_comments = 0;
+    }
+    if (!this.comments) {
+      this.comments = [];
     }
   }
 }
