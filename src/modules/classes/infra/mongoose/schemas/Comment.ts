@@ -1,4 +1,4 @@
-import { ObjectId, Schema } from "mongoose";
+import { Schema } from "mongoose";
 import { v4 as uuid } from "uuid";
 
 import { IComment } from "../../../interfaces/IComment";

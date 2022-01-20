@@ -1,0 +1,323 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2022-01-20T02:46:26.888Z",
+  "__export_source": "insomnia.desktop.app:v2021.7.2",
+  "resources": [
+    {
+      "_id": "req_65fac2a1432b4d3a9116a35fdaac1f3b",
+      "parentId": "fld_ba7f5c106fb24893b977b67abf7ad5c7",
+      "modified": 1642646054333,
+      "created": 1642645572854,
+      "url": "{{ _.baseURL }}/classes/comments/aa84a286-41c4-475e-bf37-cccaa870b6ea",
+      "name": "Delete a Comment Class",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1642645572854,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_ba7f5c106fb24893b977b67abf7ad5c7",
+      "parentId": "wrk_b900460325e44510977b1ed2bfa49e64",
+      "modified": 1642548353633,
+      "created": 1642548353633,
+      "name": "Classes",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1642548353633,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_b900460325e44510977b1ed2bfa49e64",
+      "parentId": null,
+      "modified": 1642462585862,
+      "created": 1642462585862,
+      "name": "Test Backend Tindin",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_697c4185f381495d9f3e4fff614f7429",
+      "parentId": "fld_ba7f5c106fb24893b977b67abf7ad5c7",
+      "modified": 1642638767543,
+      "created": 1642638750607,
+      "url": "{{ _.baseURL }}/classes/comments",
+      "name": "List All Comments Class",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1642636067708,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_5f2fb5b5d4264917a0097aa4049a8d11",
+      "parentId": "fld_ba7f5c106fb24893b977b67abf7ad5c7",
+      "modified": 1642645962352,
+      "created": 1642636067658,
+      "url": "{{ _.baseURL }}/classes/comments",
+      "name": "Create Comment Class",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"comment\": \"Esse vídeo é muito bom! Eu Adorei\",\n\t\"id_class\": \"3f1a3385-2e80-4c14-82b6-d81daea5d7ae\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_5f1cd9b7f49d42129e173a5711666b54"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1642636067658,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_bd8addd1cea54ba299b0f987e5af0f7a",
+      "parentId": "fld_ba7f5c106fb24893b977b67abf7ad5c7",
+      "modified": 1642630157907,
+      "created": 1642630005709,
+      "url": "{{ _.baseURL }}/classes/2739b771-58aa-4a79-83ca-246663fa77b6",
+      "name": "Delete One Class",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1642630005709,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_41ce50520f72404cacaaf90e601bfac7",
+      "parentId": "fld_ba7f5c106fb24893b977b67abf7ad5c7",
+      "modified": 1642626750820,
+      "created": 1642626610907,
+      "url": "{{ _.baseURL }}/classes/6561b34b-e51f-4bf4-b0b4-cca0ddd8d473",
+      "name": "Update One Class",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"O que é o CDI? - Aula Atualizada\",\n\t\"description\": \"Vídeo atualizado que explica em detalhes o que é o CDI\",\n\t\"video\": \"https://www.youtube.com/watch?v=lGsPhiNvXAM\",\n\t\"date_init\": \"2022-01-23T23:37:48.343Z\",\n\t\"date_end\": \"2022-01-31T23:37:48.343Z\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_e0d1d1839ddf4a0088ebe8ace7840b5a"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1642626610907,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_d216a6d0f1f349f28dee3bd696fb6c4c",
+      "parentId": "fld_ba7f5c106fb24893b977b67abf7ad5c7",
+      "modified": 1642622990583,
+      "created": 1642622910384,
+      "url": "{{ _.baseURL }}/classes/6561b34b-e51f-4bf4-b0b4-cca0ddd8d473",
+      "name": "Get One Class",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1642622910384,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_0f205ad76d8c43afa7769ba091a221b4",
+      "parentId": "fld_ba7f5c106fb24893b977b67abf7ad5c7",
+      "modified": 1642607696606,
+      "created": 1642607688325,
+      "url": "{{ _.baseURL }}/classes",
+      "name": "List All Classes",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1642607688325,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_9f7d8cacf7404148bbdb70af3f903edb",
+      "parentId": "fld_ba7f5c106fb24893b977b67abf7ad5c7",
+      "modified": 1642636611168,
+      "created": 1642548373734,
+      "url": "{{ _.baseURL }}/classes",
+      "name": "Create New Class",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Como Ficar Rico em 50 Anos?\",\n\t\"description\": \"Vídeo que explica as opções de previdência privada\",\n\t\"video\": \"https://www.youtube.com/watch?v=lGsPhiNvXAM\",\n\t\"date_init\": \"2022-01-22T23:37:48.343Z\",\n\t\"date_end\": \"2022-02-01T23:37:48.343Z\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_d67481aa529545b6b3ec433542271781"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1642548373734,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_28ea3c3819fd484c938767d6cfe821de",
+      "parentId": "fld_c049deff9d284355bf35f0edda1dbdd7",
+      "modified": 1642530333145,
+      "created": 1642471757322,
+      "url": "{{ _.baseURL }}/users",
+      "name": "Create New User",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Tarcizio Barbosa\",\n\t\"email\": \"tarcizio@io.com.br\",\n\t\"password\": \"k9sonwow11\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_30496ad68053452e8a7ef670810daee5"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1642471757322,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_c049deff9d284355bf35f0edda1dbdd7",
+      "parentId": "wrk_b900460325e44510977b1ed2bfa49e64",
+      "modified": 1642471731809,
+      "created": 1642471731809,
+      "name": "Users",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1642471731809,
+      "_type": "request_group"
+    },
+    {
+      "_id": "env_5da6e264d2bba24281b1d6e8bd40d01d3b93b77e",
+      "parentId": "wrk_b900460325e44510977b1ed2bfa49e64",
+      "modified": 1642462604422,
+      "created": 1642462585869,
+      "name": "Base Environment",
+      "data": {
+        "baseURL": "http://localhost:3333"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "baseURL"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1642462585869,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_5da6e264d2bba24281b1d6e8bd40d01d3b93b77e",
+      "parentId": "wrk_b900460325e44510977b1ed2bfa49e64",
+      "modified": 1642462585871,
+      "created": 1642462585871,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_13d319fe637649d697b802183c0d0821",
+      "parentId": "wrk_b900460325e44510977b1ed2bfa49e64",
+      "modified": 1642462585863,
+      "created": 1642462585863,
+      "fileName": "Test Backend Tindin",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    }
+  ]
+}
