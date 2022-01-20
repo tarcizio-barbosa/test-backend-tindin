@@ -1,4 +1,5 @@
 import { IClass } from "../interfaces/IClass";
+import { IComment } from "../interfaces/IComment";
 
 interface IClassesRepository {
   create(data: IClass): Promise<IClass>;
@@ -6,6 +7,7 @@ interface IClassesRepository {
   findById(id: string): Promise<IClass>;
   updateClass(data: IClass): Promise<IClass>;
   deleteClass(id: string): Promise<void>;
+  addComments(id: string, dataComment: IComment): Promise<IClass>;
 }
 
 export { IClassesRepository };

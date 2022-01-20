@@ -1,6 +1,7 @@
 import { model, Model } from "mongoose";
 
 import { IClass } from "../../../interfaces/IClass";
+import { IComment } from "../../../interfaces/IComment";
 import { IClassesRepository } from "../../../repositories/IClassesRepository";
 import { classSchema } from "../schemas/Class";
 
@@ -65,6 +66,16 @@ class ClassesRepository implements IClassesRepository {
 
   async deleteClass(id: string): Promise<void> {
     await this.Repository.findOneAndDelete({ id });
+  }
+
+  async addComments(id: string, { comment }: IComment): Promise<IClass> {
+    const oneClass = await this.Repository.findOne({ id });
+
+    oneClass.comments = [{ comment }];
+
+    const commentAdded = await oneClass.save();
+
+    return commentAdded;
   }
 }
 
