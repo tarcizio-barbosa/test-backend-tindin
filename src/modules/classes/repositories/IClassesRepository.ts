@@ -8,6 +8,7 @@ interface IClassesRepository {
   updateClass(data: IClass): Promise<IClass>;
   deleteClass(id: string): Promise<void>;
   addComments(id: string, dataComment: IComment): Promise<IClass>;
+  removeComment(id: string, id_class: string): Promise<IClass>;
 }
 
 export { IClassesRepository };

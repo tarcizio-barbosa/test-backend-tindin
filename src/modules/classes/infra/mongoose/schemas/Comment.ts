@@ -5,13 +5,18 @@ import { IComment } from "../../../interfaces/IComment";
 
 const commentSchema = new Schema<IComment>(
   {
+    id: {
+      type: String,
+      required: true,
+      default: uuid,
+    },
     comment: {
       type: String,
       required: true,
     },
     id_class: {
       type: String,
-      ref: "Class",
+      // ref: "Class",
     },
   },
   { timestamps: { createdAt: "created_at" } }
@@ -20,7 +25,7 @@ const commentSchema = new Schema<IComment>(
 class Comment {
   id: string;
   comment: string;
-  id_class: ObjectId | string;
+  id_class: string;
   created_at: Date;
 
   constructor() {

@@ -76,6 +76,22 @@ class InMemoryClassesRepository implements IClassesRepository {
 
     return oneClass;
   }
+
+  async removeComment(id: string, id_class: string): Promise<IClass> {
+    const oneClass = this.classes.find(
+      (classById) => classById.id === id_class
+    );
+
+    const oneComment = await this.inMemoryCommentsRepository.findById(id);
+
+    const commentIndex = oneClass.comments.findIndex(
+      (comment) => comment.id === oneComment.id
+    );
+
+    oneClass.comments.splice(commentIndex, 1);
+
+    return oneClass;
+  }
 }
 
 export { InMemoryClassesRepository };

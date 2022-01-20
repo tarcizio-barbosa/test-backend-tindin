@@ -77,6 +77,20 @@ class ClassesRepository implements IClassesRepository {
 
     return commentAdded;
   }
+
+  async removeComment(id: string, id_class: string): Promise<IClass> {
+    const oneClass = await this.Repository.findOne({ id: id_class });
+
+    const commentIndex = oneClass.comments.findIndex(
+      (comment) => comment.id === id
+    );
+
+    oneClass.comments.splice(commentIndex, 1);
+
+    const commentRemoved = await oneClass.save();
+
+    return commentRemoved;
+  }
 }
 
 export { ClassesRepository };

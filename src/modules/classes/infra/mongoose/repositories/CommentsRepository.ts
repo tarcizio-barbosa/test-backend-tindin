@@ -25,6 +25,16 @@ class CommentsRepository implements ICommentsRepository {
   async list(): Promise<IComment[]> {
     return this.Repository.find({});
   }
+
+  async findById(id: string): Promise<IComment> {
+    const oneComment = await this.Repository.findOne({ id });
+
+    return oneComment;
+  }
+
+  async deleteComment(id: string): Promise<void> {
+    await this.Repository.findOneAndDelete({ id });
+  }
 }
 
 export { CommentsRepository };

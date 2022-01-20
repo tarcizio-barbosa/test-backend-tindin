@@ -20,6 +20,18 @@ class InMemoryCommentsRepository implements ICommentsRepository {
 
     return allComments;
   }
+
+  async findById(id: string): Promise<IComment> {
+    const oneComment = this.comments.find((comment) => comment.id === id);
+
+    return oneComment;
+  }
+
+  async deleteComment(id: string): Promise<void> {
+    const oneComment = this.comments.findIndex((comment) => comment.id === id);
+
+    this.comments.splice(oneComment, 1);
+  }
 }
 
 export { InMemoryCommentsRepository };
