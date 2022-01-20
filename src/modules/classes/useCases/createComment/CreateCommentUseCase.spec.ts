@@ -39,8 +39,6 @@ describe("Create a Comment Class", () => {
       comment: "Eu simplesmente adore esse vídeo!",
     });
 
-    console.log(newClass);
-
     expect(newComment).toHaveProperty("id");
     expect(newClass.comments.length).toBe(1);
   });

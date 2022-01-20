@@ -21,6 +21,10 @@ class CommentsRepository implements ICommentsRepository {
 
     return newComment;
   }
+
+  async list(): Promise<IComment[]> {
+    return this.Repository.find({});
+  }
 }
 
 export { CommentsRepository };

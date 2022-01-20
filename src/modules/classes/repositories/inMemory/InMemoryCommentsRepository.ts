@@ -14,6 +14,12 @@ class InMemoryCommentsRepository implements ICommentsRepository {
 
     return newComment;
   }
+
+  async list(): Promise<IComment[]> {
+    const allComments = this.comments;
+
+    return allComments;
+  }
 }
 
 export { InMemoryCommentsRepository };
